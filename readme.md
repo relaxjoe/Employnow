@@ -18,7 +18,7 @@ The Employee Tracker is a command-line application that allows you to manage and
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/relaxjoe/employnow.git`
+1. Clone the repository: `git clone https://github.com/relaxjoe/Employnow.git`
 2. Navigate to the project directory: `cd employnow`
 3. Install the dependencies: `npm install`
 
