@@ -4,12 +4,15 @@ CREATE DATABASE employnow;
 
 USE employnow;
 
-CREATE TABLE department (
+CREATE TABLE departments (
     id INT NOT NULL auto_increment PRIMARY KEY, name VARCHAR(30) NOT NULL
 );
-
 CREATE TABLE roles (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, title VARCHAR(30) NOT NULL, salary DECIMAL(10, 2) NOT NULL, department_id INT, FOREIGN KEY (department_id) REFERENCES department (id) ON DELETE SET NULL
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(30) NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL,
+    department_id INT,
+    FOREIGN KEY (department_id) REFERENCES departments (id) ON DELETE SET NULL
 );
 
 CREATE TABLE employees (

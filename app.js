@@ -1,8 +1,10 @@
 // Import required modules
+const connection = require("./config/connection");
 const inquirer = require('inquirer');
 const mysql = require('mysql2/promise');
 require('dotenv').config();
 const consoleTable = require('console.table');
+const chalk = require('chalk');
 
 // Async function to establish a connection to the database
 async function connectToDatabase() {
@@ -111,7 +113,7 @@ async function addDepartment(connection) {
     });
 
     try {
-        await connection.execute('INSERT INTO departments (name) VALUES (?)', [departmentName]);
+        await connection.execute('INSERT INTO department (name) VALUES (?)', [departmentName]);
         console.log(`Added ${departmentName} to the database`);
     } catch (error) {
         console.error('Error adding department:', error.message);
